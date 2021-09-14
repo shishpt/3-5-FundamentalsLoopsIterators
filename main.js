@@ -15,23 +15,32 @@ const contactList = [{"name":"Mil Caghy","birth_date":"4/8/1994","children":3,"c
 
 // 
     var sum = 0;
+    var i
     for (var i = 0; i < contactList.length; i++) {
     sum += contactList[i].children
+    document.getElementById("total").innerHTML = sum;
+
     }
 
     //Outputs the amount of children each person has
-    for (var {name: n, children: c} of contactList) {
-      console.log(n + ' has ' + c + ' children');
-     }
-     //Outputs the total amount of children
-     console.log(`There are a total of ` + sum + ` children`);
-
-    for (var {name: n, birth_date: b, children: c, country: o, can_program: p} of contactList) {
-      console.log('Name: ' + n, 'Birth Date: ' + b, 'Children: ' + c, 'Country: ' + o, 'Can Program: ' + p);
-     }
-
-
-    // for in loop 
-     for (var n1 in contactList) {
-      console.log(`contactList.${n1} = ${contactList[n1]}`);
+    var child = "";
+    for (var i = 0 in contactList) {
+      child += contactList[i].name + " " + "has " + contactList[i].children + " children" + "<br>";
+      console.log(child);
+      document.getElementById("kids").innerHTML = child;
     }
+
+     //Outputs the total amount of children
+    console.log(`There are a total of ` + sum + ` children`);
+
+     //Output of person info
+    var info = "";
+
+     list: for (var i = 0 in contactList) {
+     info += "Name: " + contactList[i].name + "<br>";
+     info += "Birth Date: " + contactList[i].birth_date + "<br>";
+     info += "Children: " + contactList[i].children + "<br>";
+     info += "Country: " + contactList[i].country + "<br>";
+     info += "Ability to Program : " + contactList[i].can_program + "<br><br>";
+      }
+      document.getElementById("person").innerHTML = info;
