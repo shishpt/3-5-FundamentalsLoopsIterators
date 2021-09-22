@@ -1,4 +1,4 @@
-#The Fundamentals
+# The Fundamentals
 ### Loops & Iterators
 
 This assignment focuses on using Loops and Iterators to pull information from a dataset.
