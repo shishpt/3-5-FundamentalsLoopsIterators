@@ -1,0 +1,23 @@
+body {
+    background-color:lightblue;
+  }
+  
+  .set1 {
+    margin: 10%;
+    background-color: #443fde;
+    padding-left: 10%;
+    border: 10px solid #ED6BCE;
+    border-radius: 10px;
+    position: center;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .kids {
+    margin: 0;
+    color: white;
+    
+  }
+  
